@@ -282,3 +282,37 @@ let bookData = [
     }
 
 ];
+// Cuando todo el DOM esté cargado, salen los libros
+document.addEventListener('DOMContentLoaded', () => {
+    const contenedorLibros = document.getElementById('book-list');
+    pintarTarjetas(contenedorLibros);
+});
+
+// Creo cada tarjeta del libro usando los datos y las agrego al contenedor
+function pintarTarjetas(contenedor) {
+    for (const libro of bookData) {
+        const tarjeta = document.createElement('book-card');
+        tarjeta.setAttribute('coverUrl', libro.coverUrl);
+        tarjeta.setAttribute('title', libro.title);
+        tarjeta.setAttribute('author', libro.author);
+        tarjeta.setAttribute('synopsis', libro.synopsis);
+
+        tarjeta.addEventListener('bookSelected', () => {
+            mostrarDetalles(libro);
+        });
+
+        contenedor.appendChild(tarjeta);
+    }
+}
+
+// Aquí creo la sección con los detalles del libro seleccionado
+function mostrarDetalles(libro) {
+    const detalle = document.createElement('book-detail');
+    detalle.setAttribute('title', libro.title);
+    detalle.setAttribute('author', libro.author);
+    detalle.setAttribute('coverUrl', libro.coverUrl);
+    detalle.setAttribute('publishedDate', libro.publishedDate);
+    detalle.setAttribute('genre', libro.genre);
+    detalle.setAttribute('summary', libro.summary);
+    detalle.setAttribute('quotes', JSON.stringify(libro.quotes)); // Lo paso como string para poder mandarlo por atributo
+}
