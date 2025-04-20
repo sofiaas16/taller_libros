@@ -3,7 +3,7 @@ let bookData = [
     {
         "title": "Don Quijote de la Mancha",
         "author": "Miguel de Cervantes",
-        "coverUrl": "https://placehold.co/300x400?text=Don+Quijote+de+la+Mancha",
+        "coverUrl": "https://www.marcialpons.es/media/img/portadas/2023/4/18/9788408270881jfif",
         "synopsis": "Una obra destacada de la literatura en español, escrita por Miguel de Cervantes.",
         "publishedDate": "1977",
         "genre": "Ficción literaria",
@@ -17,7 +17,7 @@ let bookData = [
     {
         "title": "La sombra del viento",
         "author": "Carlos Ruiz Zafón",
-        "coverUrl": "https://placehold.co/300x400?text=La+sombra+del+viento",
+        "coverUrl": "https://imagessl7.casadellibro.com/a/l/t0/07/9788408093107.jpg",
         "synopsis": "Una obra destacada de la literatura en español, escrita por Carlos Ruiz Zafón.",
         "publishedDate": "1996",
         "genre": "Narrativa contemporánea",
@@ -31,7 +31,7 @@ let bookData = [
     {
         "title": "Rayuela",
         "author": "Julio Cortázar",
-        "coverUrl": "https://placehold.co/300x400?text=Rayuela",
+        "coverUrl": "https://img.huffingtonpost.com/asset/5c8a6f7d20000043046f2768.jpeg?ops=scalefit_960_noupscale",
         "synopsis": "Una obra destacada de la literatura en español, escrita por Julio Cortázar.",
         "publishedDate": "1987",
         "genre": "Novela",
@@ -45,7 +45,7 @@ let bookData = [
     {
         "title": "El amor en los tiempos del cólera",
         "author": "Gabriel García Márquez",
-        "coverUrl": "https://placehold.co/300x400?text=El+amor+en+los+tiempos+del+cólera",
+        "coverUrl": "https://galakia.com/wp-supercontent/uploads/2016/01/El-Amor-en-los-Tiempos-del-C%C3%B3lera-Gabriel-Garcia-Marquez.jpg?x72482",
         "synopsis": "Una obra destacada de la literatura en español, escrita por Gabriel García Márquez.",
         "publishedDate": "1997",
         "genre": "Narrativa contemporánea",
@@ -59,7 +59,7 @@ let bookData = [
     {
         "title": "Pedro Páramo",
         "author": "Juan Rulfo",
-        "coverUrl": "https://placehold.co/300x400?text=Pedro+Páramo",
+        "coverUrl": "https://4.bp.blogspot.com/-fLqGAN4XVA4/Vd4f6KR_xNI/AAAAAAAACC0/0Ae1MDXgHkI/s1600/pedro_p%25C3%25A1ramo%255B1%255D.png",
         "synopsis": "Una obra destacada de la literatura en español, escrita por Juan Rulfo.",
         "publishedDate": "1972",
         "genre": "Ficción histórica",
@@ -73,7 +73,7 @@ let bookData = [
     {
         "title": "La ciudad y los perros",
         "author": "Mario Vargas Llosa",
-        "coverUrl": "https://placehold.co/300x400?text=La+ciudad+y+los+perros",
+        "coverUrl": "https://i.pinimg.com/736x/4a/38/ec/4a38ec737a59c4ca57caf031ba7a8bfa.jpg",
         "synopsis": "Una obra destacada de la literatura en español, escrita por Mario Vargas Llosa.",
         "publishedDate": "2005",
         "genre": "Ficción literaria",
@@ -87,7 +87,7 @@ let bookData = [
     {
         "title": "Ficciones",
         "author": "Jorge Luis Borges",
-        "coverUrl": "https://placehold.co/300x400?text=Ficciones",
+        "coverUrl": "https://d202m5krfqbpi5.cloudfront.net/books/1388197956l/426504.jpg",
         "synopsis": "Una obra destacada de la literatura en español, escrita por Jorge Luis Borges.",
         "publishedDate": "1960",
         "genre": "Narrativa contemporánea",
@@ -101,7 +101,7 @@ let bookData = [
     {
         "title": "Los detectives salvajes",
         "author": "Roberto Bolaño",
-        "coverUrl": "https://placehold.co/300x400?text=Los+detectives+salvajes",
+        "coverUrl": "https://th.bing.com/th/id/OIP.Rw9QGAp_ohu95w_RliJasAHaLU?rs=1&pid=ImgDetMain",
         "synopsis": "Una obra destacada de la literatura en español, escrita por Roberto Bolaño.",
         "publishedDate": "1991",
         "genre": "Realismo mágico",
@@ -115,7 +115,7 @@ let bookData = [
     {
         "title": "El túnel",
         "author": "Ernesto Sabato",
-        "coverUrl": "https://placehold.co/300x400?text=El+túnel",
+        "coverUrl": "https://1.bp.blogspot.com/-iylstgq3JX0/WM7cNec_MII/AAAAAAAACsE/yQUViSokLUIHzAk1LB4Z-ShEsVLg2S_OwCLcB/s1600/El%2Bt%25C3%25BAnel.jpg",
         "synopsis": "Una obra destacada de la literatura en español, escrita por Ernesto Sabato.",
         "publishedDate": "1992",
         "genre": "Drama",
@@ -129,7 +129,7 @@ let bookData = [
     {
         "title": "Sobre héroes y tumbas",
         "author": "Ernesto Sabato",
-        "coverUrl": "https://placehold.co/300x400?text=Sobre+héroes+y+tumbas",
+        "coverUrl": "https://i.pinimg.com/originals/9a/02/b2/9a02b2e77b25263200cbd3777c1ced3e.jpg",
         "synopsis": "Una obra destacada de la literatura en español, escrita por Ernesto Sabato.",
         "publishedDate": "2004",
         "genre": "Ciencia ficción",
@@ -143,7 +143,7 @@ let bookData = [
     {
         "title": "Crónica de una muerte anunciada",
         "author": "Gabriel García Márquez",
-        "coverUrl": "https://placehold.co/300x400?text=Crónica+de+una+muerte+anunciada",
+        "coverUrl": "https://3.bp.blogspot.com/-EoIzlalmm5M/XcNowvGPPgI/AAAAAAAADAw/lC4WPM5xJ9Y6d2zenE6kzDGDeBYSAq8mwCK4BGAYYCw/s1600/gabriel-garcia-marquez-cronica-de-una-muerte-anunciada-D_NQ_NP_759425-MLV25442852143_032017-F.jpg",
         "synopsis": "Una obra destacada de la literatura en español, escrita por Gabriel García Márquez.",
         "publishedDate": "1996",
         "genre": "Ficción histórica",
@@ -157,7 +157,7 @@ let bookData = [
     {
         "title": "La casa de los espíritus",
         "author": "Isabel Allende",
-        "coverUrl": "https://placehold.co/300x400?text=La+casa+de+los+espíritus",
+        "coverUrl": "https://th.bing.com/th/id/OIP.6iS-oSHAtJ39XtpLzuWsqQHaLX?rs=1&pid=ImgDetMain",
         "synopsis": "Una obra destacada de la literatura en español, escrita por Isabel Allende.",
         "publishedDate": "1990",
         "genre": "Novela",
@@ -171,7 +171,7 @@ let bookData = [
     {
         "title": "Ensayo sobre la ceguera",
         "author": "José Saramago",
-        "coverUrl": "https://placehold.co/300x400?text=Ensayo+sobre+la+ceguera",
+        "coverUrl": "https://th.bing.com/th/id/R.1428e136c2f1315aa39d83b00f182424?rik=x0A%2f9BCXPxRUTg&riu=http%3a%2f%2fblog.pucp.edu.pe%2fblog%2fespacioentreletras%2fwp-content%2fuploads%2fsites%2f1283%2f2020%2f09%2fensayo-sobre-la-ceguera-txalaparta-eus.jpg&ehk=4nSlDBASQF%2feUrYBRSAjKpkFgVwQirQxTCba%2bLKxNic%3d&risl=&pid=ImgRaw&r=0",
         "synopsis": "Una obra destacada de la literatura en español, escrita por José Saramago.",
         "publishedDate": "1999",
         "genre": "Misterio",
@@ -185,7 +185,7 @@ let bookData = [
     {
         "title": "El Aleph",
         "author": "Jorge Luis Borges",
-        "coverUrl": "https://placehold.co/300x400?text=El+Aleph",
+        "coverUrl": "https://www.popularlibros.com/imagenes-webp-grandes/9788466/978846634683.webp",
         "synopsis": "Una obra destacada de la literatura en español, escrita por Jorge Luis Borges.",
         "publishedDate": "1971",
         "genre": "Ficción histórica",
@@ -199,7 +199,7 @@ let bookData = [
     {
         "title": "2666",
         "author": "Roberto Bolaño",
-        "coverUrl": "https://placehold.co/300x400?text=2666",
+        "coverUrl": "https://www.popularlibros.com/imagenes-webp-grandes/9788466/978846634683.webp",
         "synopsis": "Una obra destacada de la literatura en español, escrita por Roberto Bolaño.",
         "publishedDate": "1986",
         "genre": "Narrativa contemporánea",
@@ -213,7 +213,7 @@ let bookData = [
     {
         "title": "La tregua",
         "author": "Mario Benedetti",
-        "coverUrl": "https://placehold.co/300x400?text=La+tregua",
+        "coverUrl": "https://th.bing.com/th/id/R.6b2da6af1ab09098f6c306bf057d8805?rik=X27tU4tPMiLCzQ&riu=http%3a%2f%2f3.bp.blogspot.com%2f-5br-Zlm2ERI%2fUPISJj3CqKI%2fAAAAAAAAARk%2fUX5T5CtZh8k%2fs1600%2fLa-Tregua-Mario-Benedetti.jpg&ehk=lmorfhKtKi7iHN6I4MsYDFD6bKA%2fuvV8QZfxTN6AFzc%3d&risl=&pid=ImgRaw&r=0",
         "synopsis": "Una obra destacada de la literatura en español, escrita por Mario Benedetti.",
         "publishedDate": "1958",
         "genre": "Ficción literaria",
@@ -227,7 +227,7 @@ let bookData = [
     {
         "title": "El coronel no tiene quien le escriba",
         "author": "Gabriel García Márquez",
-        "coverUrl": "https://placehold.co/300x400?text=El+coronel+no+tiene+quien+le+escriba",
+        "coverUrl": "https://imagessl2.casadellibro.com/a/l/t0/52/9788497592352.jpg",
         "synopsis": "Una obra destacada de la literatura en español, escrita por Gabriel García Márquez.",
         "publishedDate": "2000",
         "genre": "Ficción histórica",
@@ -241,7 +241,7 @@ let bookData = [
     {
         "title": "Aura",
         "author": "Carlos Fuentes",
-        "coverUrl": "https://placehold.co/300x400?text=Aura",
+        "coverUrl": "https://images.macmillan.com/folio-assets/macmillan_us_frontbookcovers_1000H/9781466840041.jpg",
         "synopsis": "Una obra destacada de la literatura en español, escrita por Carlos Fuentes.",
         "publishedDate": "1985",
         "genre": "Narrativa contemporánea",
@@ -255,7 +255,7 @@ let bookData = [
     {
         "title": "Santa Evita",
         "author": "Tomás Eloy Martínez",
-        "coverUrl": "https://placehold.co/300x400?text=Santa+Evita",
+        "coverUrl": "https://th.bing.com/th/id/OIP.V9mV7k-r4YbJdvaUjeVAuAHaLK?rs=1&pid=ImgDetMain",
         "synopsis": "Una obra destacada de la literatura en español, escrita por Tomás Eloy Martínez.",
         "publishedDate": "2003",
         "genre": "Drama",
@@ -269,7 +269,7 @@ let bookData = [
     {
         "title": "Pantaleón y las visitadoras",
         "author": "Mario Vargas Llosa",
-        "coverUrl": "https://placehold.co/300x400?text=Pantaleón+y+las+visitadoras",
+        "coverUrl": "https://imagessl2.casadellibro.com/a/l/t7/72/9788466318372.jpg",
         "synopsis": "Una obra destacada de la literatura en español, escrita por Mario Vargas Llosa.",
         "publishedDate": "1986",
         "genre": "Ciencia ficción",
