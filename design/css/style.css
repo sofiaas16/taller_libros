@@ -1,0 +1,77 @@
+/* Fuente sugerida: Merriweather o Georgia */
+body {
+    font-family: 'Georgia', serif;
+    background-color: #f4f1ea;
+    color: #3e2c1c;
+    margin: 0;
+    padding: 0;
+}
+
+header {
+    background-color: #d4c4aa;
+    padding: 20px;
+    text-align: center;
+    border-bottom: 3px solid #b59e7d;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+header h1 {
+    margin: 0;
+    font-size: 2.5rem;
+    color: #3e2c1c;
+    letter-spacing: 2px;
+}
+
+main {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    padding: 30px;
+    gap: 20px;
+}
+
+/* Tarjetas de libros */
+book-card {
+    width: 250px;
+}
+
+book-detail {
+    width: 100%;
+}
+
+/* Estilos para el shadow DOM de book-card */
+book-card::part(tarjeta) {
+    background-color: #fffaf0;
+    border: 1px solid #c3b091;
+    border-radius: 8px;
+    box-shadow: 2px 4px 8px rgba(62, 44, 28, 0.2);
+    transition: transform 0.2s ease-in-out;
+}
+
+book-card::part(tarjeta):hover {
+    transform: scale(1.02);
+}
+
+/* Estilos para el shadow DOM de book-detail */
+book-detail::part(detalle) {
+    background-color: #fffaf0;
+    border: 1px solid #c3b091;
+    border-radius: 8px;
+    box-shadow: 2px 4px 8px rgba(62, 44, 28, 0.2);
+}
+
+/* Botón de volver dentro del detalle */
+book-detail::part(btn-volver) {
+    background-color: #b59e7d;
+    color: #fff;
+    font-weight: bold;
+    border: none;
+    border-radius: 5px;
+    padding: 10px 20px;
+    margin-top: 15px;
+    cursor: pointer;
+}
+
+book-detail::part(btn-volver):hover {
+    background-color: #9b845f;
+}

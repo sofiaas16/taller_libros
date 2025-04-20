@@ -185,7 +185,7 @@ let bookData = [
     {
         "title": "El Aleph",
         "author": "Jorge Luis Borges",
-        "coverUrl": "https://www.popularlibros.com/imagenes-webp-grandes/9788466/978846634683.webp",
+        "coverUrl": "https://i.pinimg.com/736x/df/00/42/df00421c0ea7c302959f6b24fd7742fd.jpg",
         "synopsis": "Una obra destacada de la literatura en español, escrita por Jorge Luis Borges.",
         "publishedDate": "1971",
         "genre": "Ficción histórica",
@@ -199,7 +199,7 @@ let bookData = [
     {
         "title": "2666",
         "author": "Roberto Bolaño",
-        "coverUrl": "https://www.popularlibros.com/imagenes-webp-grandes/9788466/978846634683.webp",
+        "coverUrl": "https://th.bing.com/th/id/OIP._yTd5I8ycpoUwlUB7a90pAHaLv?rs=1&pid=ImgDetMain",
         "synopsis": "Una obra destacada de la literatura en español, escrita por Roberto Bolaño.",
         "publishedDate": "1986",
         "genre": "Narrativa contemporánea",
@@ -282,10 +282,17 @@ let bookData = [
     }
 
 ];
-// Cuando todo el DOM esté cargado, salen los libros
+
+// Cuando todo el DOM esté cargado, se muestran los libros
 document.addEventListener('DOMContentLoaded', () => {
     const contenedorLibros = document.getElementById('book-list');
     pintarTarjetas(contenedorLibros);
+
+    // Escuchar el evento para volver a la lista
+    contenedorLibros.addEventListener('volverALista', () => {
+        contenedorLibros.innerHTML = ''; // Limpiar el contenido anterior
+        pintarTarjetas(contenedorLibros); // Volver a renderizar las tarjetas
+    });
 });
 
 // Creo cada tarjeta del libro usando los datos y las agrego al contenedor
@@ -297,22 +304,28 @@ function pintarTarjetas(contenedor) {
         tarjeta.setAttribute('author', libro.author);
         tarjeta.setAttribute('synopsis', libro.synopsis);
 
-        tarjeta.addEventListener('bookSelected', () => {
+        // Escuchar el evento de selección de libro
+        tarjeta.addEventListener('libroSeleccionado', () => {
             mostrarDetalles(libro);
         });
 
-        contenedor.appendChild(tarjeta);
+        contenedor.appendChild(tarjeta); // Agregar la tarjeta al contenedor
     }
 }
 
 // Aquí creo la sección con los detalles del libro seleccionado
 function mostrarDetalles(libro) {
     const detalle = document.createElement('book-detail');
-    detalle.setAttribute('title', libro.title);
-    detalle.setAttribute('author', libro.author);
-    detalle.setAttribute('coverUrl', libro.coverUrl);
-    detalle.setAttribute('publishedDate', libro.publishedDate);
-    detalle.setAttribute('genre', libro.genre);
-    detalle.setAttribute('summary', libro.summary);
-    detalle.setAttribute('quotes', JSON.stringify(libro.quotes)); // Lo paso como string para poder mandarlo por atributo
+    detalle.setAttribute('titulo', libro.title); // Cambiado a 'titulo'
+    detalle.setAttribute('autor', libro.author); // Cambiado a 'autor'
+    detalle.setAttribute('imagen', libro.coverUrl); // Cambiado a 'imagen'
+    detalle.setAttribute('fecha', libro.publishedDate); // Cambiado a 'fecha'
+    detalle.setAttribute('genero', libro.genre); // Cambiado a 'genero'
+    detalle.setAttribute('resumen', libro.summary); // Cambiado a 'resumen'
+    detalle.setAttribute('frases', JSON.stringify(libro.quotes)); // Lo paso como string para poder mandarlo por atributo
+
+    // Agregar el detalle al contenedor
+    const contenedorLibros = document.getElementById('book-list');
+    contenedorLibros.innerHTML = ''; // Limpiar el contenedor
+    contenedorLibros.appendChild(detalle); // Agregar el componente de detalle al contenedor
 }
