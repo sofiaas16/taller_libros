@@ -15,13 +15,9 @@ class DetalleLibro extends HTMLElement {
         this.mostrarDetalle();
     }
 
-    // Apenas el componente se añade al HTML, lo dibujo y le pongo funcionalidad al botón
+    // Apenas el componente se añade al HTML, lo dibujo
     connectedCallback() {
         this.mostrarDetalle();
-        // Escucho el clic del botón para volver a la lista
-        this.shadowRoot.querySelector('.btn-volver').addEventListener('click', () => {
-            this.dispatchEvent(new CustomEvent('volverALista', { bubbles: true }));
-        });
     }
 
     // Armo la vista con los detalles del libro
@@ -36,6 +32,13 @@ class DetalleLibro extends HTMLElement {
 
         this.shadowRoot.innerHTML = `
         <style>
+            .contenedor {
+                display: flex;
+                justify-content: center;    
+                align-items: center;
+                min-height: 100vh;
+            }
+    
             .detalle {
                 border: 2px solid #BFA2DB;
                 border-radius: 12px;
@@ -45,7 +48,6 @@ class DetalleLibro extends HTMLElement {
                 background-color: #F3E8FF;
                 box-shadow: 0 4px 10px rgba(120, 94, 240, 0.15);
                 max-width: 400px;
-             
             }
     
             img {
@@ -68,7 +70,7 @@ class DetalleLibro extends HTMLElement {
             }
     
             .frase {
-                font-style: italic;
+                
                 color: #6D6875;
                 background-color: #EDE4FF;
                 padding: 8px;
@@ -82,36 +84,22 @@ class DetalleLibro extends HTMLElement {
                 margin-top: 20px;
                 color: #000000;
             }
-    
-            .btn-volver {
-                margin-top: 25px;
-                padding: 10px 25px;
-                background-color: #9D4EDD;
-                color: white;
-                border: none;
-                border-radius: 8px;
-                transition: background-color 0.3s ease;
-            }
-    
-            .btn-volver:hover {
-                background-color: #7B2CBF;
-            }
         </style>
-        <div class="detalle">
-            <img src="${imagen}" alt="${titulo}">
-            <h2>${titulo}</h2>
-            <p>Autor: ${autor}</p>
-            <p>Fecha de publicación: ${fecha}</p>
-            <p>Género: ${genero}</p>
-            <p><strong>Resumen:</strong> ${resumen}</p>
-            <h3>Citas:</h3>
-            <div>
-                ${frases.map(frase => `<p class="frase">"${frase}"</p>`).join('')}
+        <div class="contenedor">
+            <div class="detalle">
+                <img src="${imagen}" alt="${titulo}">
+                <h2>${titulo}</h2>
+                <p><strong>Autor:</strong> ${autor}</p>
+                <p><strong>Fecha de publicación:</strong> ${fecha}</p>
+                <p><strong>Género:</strong> ${genero}</p>
+                <p><strong>Resumen:</strong> ${resumen}</p>
+                <h3>Citas:</h3>
+                <div>
+                    ${frases.map(frase => `<p class="frase">"${frase}"</p>`).join('')}
+                </div>
             </div>
-            <button class="btn-volver">Volver</button>
         </div>
     `;
-
     }
 }
 

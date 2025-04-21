@@ -5,7 +5,7 @@ class TarjetaLibro extends HTMLElement {
         this.attachShadow({ mode: 'open' }); // Creo un Shadow DOM en modo 'open' para encapsular el contenido
     }
 
-    // Especifico qué atributos quiero observar por si cambian
+    // Especifico qué atributos quierpo observar por si llegan a  cambiar
     static get observedAttributes() {
         return ['coverUrl', 'title', 'author', 'synopsis'];
     }
@@ -21,7 +21,7 @@ class TarjetaLibro extends HTMLElement {
 
         // Agrego un evento al hacer clic en la tarjeta
         this.shadowRoot.querySelector('.tarjeta').addEventListener('click', () => {
-            // Disparo un evento personalizado llamado 'libroSeleccionado'
+            // Se lanza un evento personalizado llamado 'libroSeleccionado'
             this.dispatchEvent(new CustomEvent('libroSeleccionado', {
                 detail: { titulo: this.getAttribute('title') } // Envío el título del libro como detalle
             }));
@@ -62,21 +62,22 @@ class TarjetaLibro extends HTMLElement {
             }
     
             h2 {
+    
                 font-size: 1.3em;
-                color:#000000; 
+                color:#00000; 
                 margin-bottom: 8px;
             }
     
             p {
                 font-size: 0.95em;
-                color: #3D3B4F; 
+                color: #3D3B4F; /* Texto gris oscuro/morado apagado */
                 margin: 4px 0;
             }
         </style>
         <div class="tarjeta">
             <img src="${portada}" alt="${titulo}"> <!-- Imagen de portada -->
             <h2>${titulo}</h2> <!-- Título del libro -->
-            <p>Autor: ${autor}</p> <!-- Nombre del autor -->
+            <p><strong>Autor: </strong> ${autor}</p> <!-- Nombre del autor -->
             <p>${sinopsis}</p> <!-- Sinopsis del libro -->
         </div>
     `;

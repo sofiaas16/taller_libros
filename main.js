@@ -287,12 +287,6 @@ let bookData = [
 document.addEventListener('DOMContentLoaded', () => {
     const contenedorLibros = document.getElementById('book-list');
     pintarTarjetas(contenedorLibros);
-
-    // Escuchar el evento para volver a la lista
-    contenedorLibros.addEventListener('volverALista', () => {
-        contenedorLibros.innerHTML = ''; // Limpiar el contenido anterior
-        pintarTarjetas(contenedorLibros); // Volver a renderizar las tarjetas
-    });
 });
 
 // Creo cada tarjeta del libro usando los datos y las agrego al contenedor
@@ -304,28 +298,41 @@ function pintarTarjetas(contenedor) {
         tarjeta.setAttribute('author', libro.author);
         tarjeta.setAttribute('synopsis', libro.synopsis);
 
-        // Escuchar el evento de selección de libro
-        tarjeta.addEventListener('libroSeleccionado', () => {
-            mostrarDetalles(libro);
+        // Escuchar el evento de clic en la tarjeta
+        tarjeta.addEventListener('click', () => {
+            mostrarDetalles(libro); // Mostrar detalles en el modal
         });
 
         contenedor.appendChild(tarjeta); // Agregar la tarjeta al contenedor
     }
 }
 
-// Aquí creo la sección con los detalles del libro seleccionado
+// Aquí creo la sección con los detalles del libro seleccionado en un modal
 function mostrarDetalles(libro) {
-    const detalle = document.createElement('book-detail');
-    detalle.setAttribute('titulo', libro.title); // Cambiado a 'titulo'
-    detalle.setAttribute('autor', libro.author); // Cambiado a 'autor'
-    detalle.setAttribute('imagen', libro.coverUrl); // Cambiado a 'imagen'
-    detalle.setAttribute('fecha', libro.publishedDate); // Cambiado a 'fecha'
-    detalle.setAttribute('genero', libro.genre); // Cambiado a 'genero'
-    detalle.setAttribute('resumen', libro.summary); // Cambiado a 'resumen'
-    detalle.setAttribute('frases', JSON.stringify(libro.quotes)); // Lo paso como string para poder mandarlo por atributo
+    const modal = document.getElementById('modal');
+    const modalContent = modal.querySelector('.modal-content');
 
-    // Agregar el detalle al contenedor
-    const contenedorLibros = document.getElementById('book-list');
-    contenedorLibros.innerHTML = ''; // Limpiar el contenedor
-    contenedorLibros.appendChild(detalle); // Agregar el componente de detalle al contenedor
+    // Crear una instancia del componente book-detail
+    const detalleLibro = document.createElement('book-detail');
+    detalleLibro.setAttribute('titulo', libro.title);
+    detalleLibro.setAttribute('autor', libro.author);
+    detalleLibro.setAttribute('imagen', libro.coverUrl);
+    detalleLibro.setAttribute('fecha', libro.publishedDate);
+    detalleLibro.setAttribute('genero', libro.genre);
+    detalleLibro.setAttribute('resumen', libro.summary);
+    detalleLibro.setAttribute('frases', JSON.stringify(libro.quotes));
+
+
+    modalContent.innerHTML = '';
+    modalContent.appendChild(detalleLibro);
+
+    // Par poder mostrar el modal
+    modal.style.display = 'block';
+
+    // Cerrar el modal al hacer clic fuera del contenido
+    window.addEventListener('click', (event) => {
+        if (event.target === modal) {
+            modal.style.display = 'none';
+        }
+    });
 }
