@@ -1,3 +1,4 @@
+
 // Datos de los libros
 let bookData = [
     {
@@ -289,7 +290,7 @@ document.addEventListener('DOMContentLoaded', () => {
     pintarTarjetas(contenedorLibros);
 });
 
-// Creo cada tarjeta del libro usando los datos y las agrego al contenedor
+// Creo cada tarjeta del libro usando los datos y se agregan al contenedor
 function pintarTarjetas(contenedor) {
     for (const libro of bookData) {
         const tarjeta = document.createElement('book-card');
@@ -321,7 +322,6 @@ function mostrarDetalles(libro) {
     detalleLibro.setAttribute('genero', libro.genre);
     detalleLibro.setAttribute('resumen', libro.summary);
     detalleLibro.setAttribute('frases', JSON.stringify(libro.quotes));
-
 
     modalContent.innerHTML = '';
     modalContent.appendChild(detalleLibro);

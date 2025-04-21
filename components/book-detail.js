@@ -1,3 +1,4 @@
+
 class DetalleLibro extends HTMLElement {
     constructor() {
         super();
@@ -5,12 +6,11 @@ class DetalleLibro extends HTMLElement {
         this.attachShadow({ mode: 'open' });
     }
 
-    // Estos son los datos que voy a estar pendiente por si cambian
+    // Estos son los datos que voy a estar pendiente por si llegan a cambiar
     static get observedAttributes() {
         return ['titulo', 'autor', 'imagen', 'fecha', 'genero', 'resumen', 'frases'];
     }
 
-    // Si algún dato cambia, vuelvo a dibujar los detalles
     attributeChangedCallback(nombre, valorViejo, valorNuevo) {
         this.mostrarDetalle();
     }
@@ -105,3 +105,4 @@ class DetalleLibro extends HTMLElement {
 
 // Registro el componente con el nombre en español
 customElements.define('book-detail', DetalleLibro);
+

@@ -1,3 +1,4 @@
+
 // Defino una clase personalizada llamada TarjetaLibro que extiende HTMLElement
 class TarjetaLibro extends HTMLElement {
     constructor() {
@@ -87,3 +88,6 @@ class TarjetaLibro extends HTMLElement {
 
 // Registro el componente personalizado con el nombre 'book-card'
 customElements.define('book-card', TarjetaLibro);
+
+
+
