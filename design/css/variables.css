@@ -1,0 +1,15 @@
+:root {
+    --color-1: #;
+    --color-2: #;
+    --color-3: #;
+}
+
+@font-face {
+    font-family: "gotu";
+    src: url(../resources/font/Gotu/Gotu/Gotu-Regular.ttf);
+}
+
+@font-face {
+    font-family: "epilogue";
+    src: url(../resources/font/Gotu/Epilogue/Epilogue-VariableFont_wght.ttf);
+}
